@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3637B143-1C57-470C-88AE-A9F8C3D5DE8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KanalMF</RootNamespace>
+    <AssemblyName>KanalMF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kanal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kanal.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kanal.cs">
+      <DependentUpon>Kanal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kanal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kanal.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Kanal1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kanal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kanallar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kanallar.Designer.cs">
+      <DependentUpon>Kanallar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sorumlu.cs">
+      <DependentUpon>Kanal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sorumlular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sorumlular.Designer.cs">
+      <DependentUpon>Sorumlular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yayin.cs">
+      <DependentUpon>Kanal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Yayinlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yayinlar.Designer.cs">
+      <DependentUpon>Yayinlar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kanallar.resx">
+      <DependentUpon>Kanallar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sorumlular.resx">
+      <DependentUpon>Sorumlular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yayinlar.resx">
+      <DependentUpon>Yayinlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Kanal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Kanal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Kanal.edmx.diagram">
+      <DependentUpon>Kanal.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Kanal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Kanal.Context.cs</LastGenOutput>
+      <DependentUpon>Kanal.edmx</DependentUpon>
+    </Content>
+    <Content Include="Kanal.edmx.sql" />
+    <Content Include="Kanal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Kanal1.cs</LastGenOutput>
+      <DependentUpon>Kanal.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
